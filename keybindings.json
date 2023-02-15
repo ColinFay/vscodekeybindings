@@ -1,0 +1,103 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "ctrl+shift+p",
+        "command": "git.push"
+    },
+    {
+        "key": "alt+-",
+        "command": "type",
+        "when": "editorLangId == r || editorLangId == rmd && editorTextFocus",
+        "args": {
+            "text": " <- "
+        }
+    },
+    // Pipe
+    {
+        "key": "cmd+shift+m",
+        "command": "type",
+        "when": "editorLangId == r || editorLangId == rmd && editorTextFocus",
+        "args": {
+            "text": " |> "
+        }
+    },
+    // Insert a chunk
+    {
+        "key": "alt+cmd+i",
+        "command": "type",
+        "when": "editorLangId == r || editorLangId == rmd || editorLangId == qmd && editorTextFocus",
+        "args": {
+            "text": "```{r}\n\n```"
+        }
+    },
+    // Roxygen skeleton
+    {
+        "key": "cmd+alt+shift+r",
+        "command": "type",
+        "when": "editorLangId == r || editorLangId == rmd && editorTextFocus",
+        "args": {
+            "text": "\n#' Title\n#'\n#' Description\n#'\n#' @param\n#'\n#' @export\n#' \n#' @example\n"
+        }
+    },
+    // Build
+    {
+        "description": "Build",
+        "key": "Cmd+Shift+B",
+        "command": "r.runCommand",
+        "when": "editorLangId == r || editorLangId == rmd && editorTextFocus",
+        "args": "devtools::build()"
+    },
+    {
+        "description": "Load All (devtools)",
+        "key": "Cmd+Shift+L",
+        "command": "r.runCommand",
+        "when": "editorLangId == r || editorLangId == rmd && editorTextFocus",
+        "args": "devtools::load_all()"
+    },
+    {
+        "description": "Test Package",
+        "key": "Cmd+Shift+T",
+        "command": "r.runCommand",
+        "when": "editorLangId == r || editorLangId == rmd && editorTextFocus",
+        "args": "devtools::test()"
+    },
+    {
+        "description": "Check Package",
+        "key": "Cmd+Shift+E",
+        "command": "r.runCommand",
+        "when": "editorLangId == r || editorLangId == rmd && editorTextFocus",
+        "args": "devtools::check()"
+    },
+    {
+        "description": "Document Package",
+        "key": "Ctrl+Shift+D",
+        "when": "editorLangId == r || editorLangId == rmd",
+        "command": "r.runCommand",
+        "args": "devtools::document()"
+    },
+    {
+        "description": "See definition",
+        "key": "f2",
+        "when": "editorLangId == r || editorLangId == rmd && editorTextFocus",
+        "command": "editor.action.revealDefinition"
+    },
+    {
+        "description": "Golem run dev",
+        "key": "cmd+r cmd+d",
+        "when": "editorLangId == r || editorLangId == rmd && editorTextFocus",
+        "command": "r.runCommand",
+        "args": "golem::run_dev()"
+    },
+    {
+        "description": "Golem add fct",
+        "key": "Ctrl+Cmd+F",
+        "command": "r.runCommandWithSelectionOrWord",
+        "args": "golem::add_fct('$$')"
+    },
+    {
+        "description": "Golem add utils",
+        "key": "Ctrl+Cmd+U",
+        "command": "r.runCommandWithSelectionOrWord",
+        "args": "golem::add_utils('$$')"
+    }
+]
