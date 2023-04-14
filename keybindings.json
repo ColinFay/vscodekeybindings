@@ -7,7 +7,7 @@
     {
         "key": "alt+-",
         "command": "type",
-        "when": "editorLangId == r || editorLangId == rmd && editorTextFocus",
+        "when": "editorLangId == r || editorLangId == rmd && editorTextFocus || editorLangId == qmd && editorTextFocus",
         "args": {
             "text": " <- "
         }
@@ -16,7 +16,7 @@
     {
         "key": "cmd+shift+m",
         "command": "type",
-        "when": "editorLangId == r || editorLangId == rmd && editorTextFocus",
+        "when": "editorLangId == r || editorLangId == rmd && editorTextFocus || editorLangId == qmd && editorTextFocus",
         "args": {
             "text": " |> "
         }
@@ -34,7 +34,7 @@
     {
         "key": "cmd+alt+shift+r",
         "command": "type",
-        "when": "editorLangId == r || editorLangId == rmd && editorTextFocus",
+        "when": "editorLangId == r || editorLangId == rmd && editorTextFocus || editorLangId == qmd && editorTextFocus",
         "args": {
             "text": "\n#' Title\n#'\n#' Description\n#'\n#' @param\n#'\n#' @export\n#' \n#' @example\n"
         }
@@ -44,7 +44,7 @@
         "description": "Build",
         "key": "Cmd+Shift+B",
         "command": "r.runCommand",
-        "when": "editorLangId == r || editorLangId == rmd && editorTextFocus",
+        "when": "editorLangId == r || editorLangId == rmd && editorTextFocus || editorLangId == qmd && editorTextFocus",
         "args": "devtools::build()"
     },
     {
